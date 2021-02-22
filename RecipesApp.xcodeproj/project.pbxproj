@@ -3,29 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1B1BF4BF25E3E7F90089FFD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4BE25E3E7F90089FFD1 /* AppDelegate.swift */; };
 		1B1BF4C125E3E7F90089FFD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4C025E3E7F90089FFD1 /* SceneDelegate.swift */; };
-		1B1BF4C325E3E7F90089FFD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4C225E3E7F90089FFD1 /* ViewController.swift */; };
 		1B1BF4C625E3E7F90089FFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BF4C425E3E7F90089FFD1 /* Main.storyboard */; };
 		1B1BF4C925E3E7F90089FFD1 /* RecipesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4C725E3E7F90089FFD1 /* RecipesApp.xcdatamodeld */; };
 		1B1BF4CB25E3E7FD0089FFD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BF4CA25E3E7FD0089FFD1 /* Assets.xcassets */; };
 		1B1BF4CE25E3E7FD0089FFD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1BF4CC25E3E7FD0089FFD1 /* LaunchScreen.storyboard */; };
+		1B1BF4D925E3E9340089FFD1 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4D825E3E9340089FFD1 /* RecipeTableViewCell.swift */; };
+		1B1BF4E125E3E9C70089FFD1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4E025E3E9C70089FFD1 /* Item.swift */; };
+		1B1BF4E525E3E9F60089FFD1 /* Gloss in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1BF4E425E3E9F60089FFD1 /* Gloss */; };
+		1B1BF4EA25E3EC1E0089FFD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4E925E3EC1E0089FFD1 /* SearchViewController.swift */; };
+		1B1BF4F025E401670089FFD1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4EF25E401670089FFD1 /* DetailViewController.swift */; };
+		1B1BF4F325E427460089FFD1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4F225E427460089FFD1 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B1BF4BB25E3E7F90089FFD1 /* RecipesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1BF4BE25E3E7F90089FFD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B1BF4C025E3E7F90089FFD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B1BF4C225E3E7F90089FFD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B1BF4C525E3E7F90089FFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B1BF4C825E3E7F90089FFD1 /* RecipesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipesApp.xcdatamodel; sourceTree = "<group>"; };
 		1B1BF4CA25E3E7FD0089FFD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B1BF4CD25E3E7FD0089FFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B1BF4CF25E3E7FD0089FFD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B1BF4D825E3E9340089FFD1 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		1B1BF4E025E3E9C70089FFD1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1B1BF4E925E3EC1E0089FFD1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1B1BF4EF25E401670089FFD1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1B1BF4F225E427460089FFD1 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1BF4E525E3E9F60089FFD1 /* Gloss in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +68,52 @@
 		1B1BF4BD25E3E7F90089FFD1 /* RecipesApp */ = {
 			isa = PBXGroup;
 			children = (
-				1B1BF4BE25E3E7F90089FFD1 /* AppDelegate.swift */,
-				1B1BF4C025E3E7F90089FFD1 /* SceneDelegate.swift */,
-				1B1BF4C225E3E7F90089FFD1 /* ViewController.swift */,
-				1B1BF4C425E3E7F90089FFD1 /* Main.storyboard */,
+				1B1BF4DF25E3E9BC0089FFD1 /* Model */,
+				1B1BF4F525E42D150089FFD1 /* AppDelegate */,
+				1B1BF4D625E3E9210089FFD1 /* Controllers */,
+				1B1BF4E825E3EB950089FFD1 /* Views */,
 				1B1BF4CA25E3E7FD0089FFD1 /* Assets.xcassets */,
-				1B1BF4CC25E3E7FD0089FFD1 /* LaunchScreen.storyboard */,
 				1B1BF4CF25E3E7FD0089FFD1 /* Info.plist */,
 				1B1BF4C725E3E7F90089FFD1 /* RecipesApp.xcdatamodeld */,
 			);
 			path = RecipesApp;
+			sourceTree = "<group>";
+		};
+		1B1BF4D625E3E9210089FFD1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B1BF4E925E3EC1E0089FFD1 /* SearchViewController.swift */,
+				1B1BF4D825E3E9340089FFD1 /* RecipeTableViewCell.swift */,
+				1B1BF4EF25E401670089FFD1 /* DetailViewController.swift */,
+				1B1BF4F225E427460089FFD1 /* WebViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1B1BF4DF25E3E9BC0089FFD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B1BF4E025E3E9C70089FFD1 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B1BF4E825E3EB950089FFD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B1BF4C425E3E7F90089FFD1 /* Main.storyboard */,
+				1B1BF4CC25E3E7FD0089FFD1 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B1BF4F525E42D150089FFD1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1B1BF4BE25E3E7F90089FFD1 /* AppDelegate.swift */,
+				1B1BF4C025E3E7F90089FFD1 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +132,9 @@
 			dependencies = (
 			);
 			name = RecipesApp;
+			packageProductDependencies = (
+				1B1BF4E425E3E9F60089FFD1 /* Gloss */,
+			);
 			productName = RecipesApp;
 			productReference = 1B1BF4BB25E3E7F90089FFD1 /* RecipesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 1B1BF4B225E3E7F90089FFD1;
+			packageReferences = (
+				1B1BF4E325E3E9F60089FFD1 /* XCRemoteSwiftPackageReference "Gloss" */,
+			);
 			productRefGroup = 1B1BF4BC25E3E7F90089FFD1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,10 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1BF4C325E3E7F90089FFD1 /* ViewController.swift in Sources */,
+				1B1BF4D925E3E9340089FFD1 /* RecipeTableViewCell.swift in Sources */,
+				1B1BF4EA25E3EC1E0089FFD1 /* SearchViewController.swift in Sources */,
 				1B1BF4BF25E3E7F90089FFD1 /* AppDelegate.swift in Sources */,
 				1B1BF4C125E3E7F90089FFD1 /* SceneDelegate.swift in Sources */,
 				1B1BF4C925E3E7F90089FFD1 /* RecipesApp.xcdatamodeld in Sources */,
+				1B1BF4E125E3E9C70089FFD1 /* Item.swift in Sources */,
+				1B1BF4F025E401670089FFD1 /* DetailViewController.swift in Sources */,
+				1B1BF4F325E427460089FFD1 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B1BF4E325E3E9F60089FFD1 /* XCRemoteSwiftPackageReference "Gloss" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hkellaway/Gloss.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B1BF4E425E3E9F60089FFD1 /* Gloss */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B1BF4E325E3E9F60089FFD1 /* XCRemoteSwiftPackageReference "Gloss" */;
+			productName = Gloss;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B1BF4C725E3E7F90089FFD1 /* RecipesApp.xcdatamodeld */ = {
