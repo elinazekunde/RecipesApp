@@ -119,7 +119,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         }
 
         vc.titleString = items[indexPath.row].title
-        vc.recipeImage = items[indexPath.row].image
+        vc.recipeImage = items[indexPath.row].image!
         vc.categoryString = items[indexPath.row].category
         vc.areaString = items[indexPath.row].area
         vc.tagString = items[indexPath.row].tags
