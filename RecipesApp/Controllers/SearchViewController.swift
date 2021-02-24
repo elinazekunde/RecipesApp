@@ -43,10 +43,11 @@ class SearchViewController: UIViewController {
     }
     
     func handleGetData() {
+        
         if let keyword = keywordLabel.text, keyword != "" {
             jsonUrl += keyword
         }
-        
+
         guard let url = URL(string: jsonUrl) else { return }
         
         var urlRequest = URLRequest(url: url)
@@ -66,7 +67,7 @@ class SearchViewController: UIViewController {
             
             do {
                 if let dictData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    //print("dictData", dictData)
+                    print("dictData", dictData)
                     self.populateData(dictData)
                 }
             } catch {
@@ -85,20 +86,10 @@ class SearchViewController: UIViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.keywordLabel.text = ""
+            self.jsonUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s="
             self.activityIndicator(animated: false)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {

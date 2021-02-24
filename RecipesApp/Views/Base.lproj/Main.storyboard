@@ -30,16 +30,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-Uf-Sxk">
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-Uf-Sxk">
                                         <rect key="frame" x="315" y="0.0" width="60" height="40"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="OPP-XQ-hT7"/>
                                             <constraint firstAttribute="height" constant="40" id="Wt0-sP-h9m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                         <state key="normal" title="Search">
-                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="searchButtonTapped:" destination="jVZ-Dn-faQ" eventType="touchUpInside" id="AeV-5J-agl"/>
@@ -58,7 +58,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-fw-gde">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-fw-gde">
                                                     <rect key="frame" x="2" y="2" width="175" height="146"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="78e-y0-7Mh">
@@ -68,10 +68,10 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="220" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="Div-HH-00Y"/>
-                                                                <constraint firstAttribute="width" constant="220" id="QPM-v4-jf8"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="QPM-v4-jf8"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="linkColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nCB-44-y71">
@@ -80,7 +80,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-Gt-yD5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="82" id="PPE-ay-EbR"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="PPE-ay-EbR"/>
                                                                         <constraint firstAttribute="height" constant="25" id="a53-TG-Mri"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
@@ -105,7 +105,6 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODl-Vb-iS8">
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="82" id="YrG-DK-wuo"/>
                                                                         <constraint firstAttribute="height" constant="25" id="fWT-e0-879"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
@@ -131,7 +130,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="4if-6L-hxP"/>
-                                                                        <constraint firstAttribute="width" constant="82" id="7aa-EF-riU"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="7aa-EF-riU"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                                     <nil key="textColor"/>
@@ -150,6 +149,10 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="220" id="HhT-RD-EIB"/>
+                                                        <constraint firstAttribute="height" constant="124" id="gV4-w7-QW4"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -158,6 +161,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="o7b-fw-gde" secondAttribute="bottom" constant="2" id="ZFZ-rZ-4sP"/>
                                                 <constraint firstItem="78e-y0-7Mh" firstAttribute="top" secondItem="asy-kt-syX" secondAttribute="top" constant="12" id="bsM-b1-nl8"/>
                                                 <constraint firstAttribute="trailing" secondItem="78e-y0-7Mh" secondAttribute="trailing" constant="9" id="p3V-t8-hQO"/>
+                                                <constraint firstItem="78e-y0-7Mh" firstAttribute="leading" secondItem="o7b-fw-gde" secondAttribute="trailing" constant="8" symbolic="YES" id="rdr-SM-Y3p"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -218,47 +222,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iwz-aq-mnS">
-                                            <rect key="frame" x="20" y="11" width="365" height="128"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vtb-yo-OIU">
+                                            <rect key="frame" x="4.5" y="9.5" width="405" height="131"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WzN-NJ-w0g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="131"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="178" id="4h6-Gs-2BU"/>
-                                                        <constraint firstAttribute="height" constant="128" id="fED-1o-f4U"/>
+                                                        <constraint firstAttribute="width" constant="175" id="r0N-Wm-wo9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="45b-dW-GO8">
-                                                    <rect key="frame" x="193" y="0.0" width="172" height="128"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nJY-t5-oCf">
+                                                    <rect key="frame" x="185" y="0.0" width="220" height="131"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui9-eC-hrd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="220" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="FHV-ps-5jn"/>
-                                                                <constraint firstAttribute="width" constant="172" id="cGz-tO-KOr"/>
+                                                                <constraint firstAttribute="height" constant="50" id="Fof-MG-Heb"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="XvW-5d-7kC"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="systemBlueColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="O8l-LH-aMM">
-                                                            <rect key="frame" x="0.0" y="54" width="172" height="22"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dm3-RI-IpV">
+                                                            <rect key="frame" x="0.0" y="52" width="220" height="25"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfz-pc-oYi">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="22" id="Ayp-4u-jnQ"/>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="fyW-hM-CLK"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="7o0-DL-iaU"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="hhu-TF-lTQ"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbj-tO-jBe">
-                                                                    <rect key="frame" x="90" y="0.0" width="82" height="22"/>
+                                                                    <rect key="frame" x="90" y="0.0" width="130" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="22" id="7aI-jQ-3Dp"/>
-                                                                        <constraint firstAttribute="width" constant="82" id="zjx-2s-jW5"/>
+                                                                        <constraint firstAttribute="width" constant="130" id="Xhp-93-98K"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="oyM-51-Lx4"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -266,24 +269,24 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t84-2n-yIn">
-                                                            <rect key="frame" x="0.0" y="80" width="172" height="22"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IZA-wQ-orK">
+                                                            <rect key="frame" x="0.0" y="79" width="220" height="25"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhz-1R-3ro">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="Swd-v4-ARt"/>
-                                                                        <constraint firstAttribute="height" constant="22" id="xVS-g1-NDH"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="9VZ-29-wRf"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="zry-ck-eZM"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPl-vT-uvk">
-                                                                    <rect key="frame" x="90" y="0.0" width="82" height="22"/>
+                                                                    <rect key="frame" x="90" y="0.0" width="130" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="82" id="CZe-oF-WMH"/>
-                                                                        <constraint firstAttribute="height" constant="22" id="eos-6N-E8M"/>
+                                                                        <constraint firstAttribute="width" constant="130" id="CpT-D8-KNG"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="a8v-Xb-H8U"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -291,24 +294,24 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nHX-OD-IOi">
-                                                            <rect key="frame" x="0.0" y="106" width="172" height="22"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4le-gD-TEM">
+                                                            <rect key="frame" x="0.0" y="106" width="220" height="25"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wv-gj-6YN">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="5BD-XM-ggu"/>
-                                                                        <constraint firstAttribute="height" constant="22" id="xr0-lW-nZN"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="HDW-sM-aK9"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="gXb-Hd-0sx"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYA-S9-eHI">
-                                                                    <rect key="frame" x="90" y="0.0" width="82" height="22"/>
+                                                                    <rect key="frame" x="90" y="0.0" width="130" height="25"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="22" id="6V4-hj-WiS"/>
-                                                                        <constraint firstAttribute="width" constant="82" id="wPy-vd-M3h"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="fCp-MQ-nBg"/>
+                                                                        <constraint firstAttribute="width" constant="130" id="fLU-WF-MEQ"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -318,13 +321,16 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="172" id="1Y5-yj-0Pk"/>
-                                                        <constraint firstAttribute="height" constant="128" id="NfF-ZI-D10"/>
+                                                        <constraint firstAttribute="width" constant="220" id="Dkg-Va-SfV"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vtb-yo-OIU" firstAttribute="centerY" secondItem="4Xd-DO-NeS" secondAttribute="centerY" id="GTk-iF-hII"/>
+                                        <constraint firstItem="vtb-yo-OIU" firstAttribute="centerX" secondItem="4Xd-DO-NeS" secondAttribute="centerX" id="fCT-k3-74F"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="areaLabel" destination="rPl-vT-uvk" id="jHE-v1-Fbx"/>
@@ -344,7 +350,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6HM-mG-9dz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4280" y="771"/>
+            <point key="canvasLocation" x="4279.7101449275369" y="770.75892857142856"/>
         </scene>
         <!--Shopping List-->
         <scene sceneID="5Xg-aO-pXu">
@@ -356,21 +362,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingCell" textLabel="lnv-b0-52N" detailTextLabel="HM8-0t-dRh" style="IBUITableViewCellStyleSubtitle" id="eKS-O6-WoZ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="68.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eKS-O6-WoZ" id="wlc-Pz-fuJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lnv-b0-52N">
-                                            <rect key="frame" x="20" y="9" width="42" height="20"/>
+                                            <rect key="frame" x="20" y="12.5" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HM8-0t-dRh">
-                                            <rect key="frame" x="20" y="29" width="68" height="18"/>
+                                            <rect key="frame" x="20" y="36" width="68" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="18"/>
                                             <nil key="textColor"/>
@@ -424,12 +430,13 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5P-rA-ZUJ">
                                                         <rect key="frame" x="0.0" y="418" width="398" height="70"/>
+                                                        <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="8gc-tI-4I4"/>
                                                             <constraint firstAttribute="width" constant="398" id="eBd-Gy-M00"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="25"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pJ7-3H-L4r">
@@ -441,7 +448,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0r-jY-t0M">
                                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="85" id="62f-EV-1yG"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="62f-EV-1yG"/>
                                                                             <constraint firstAttribute="height" constant="25" id="9b2-27-od0"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
@@ -466,7 +473,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVi-dr-cpm">
                                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="85" id="ar3-it-n1P"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="ar3-it-n1P"/>
                                                                             <constraint firstAttribute="height" constant="25" id="jca-uw-B9o"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
@@ -492,7 +499,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="25" id="GLf-c6-QMi"/>
-                                                                            <constraint firstAttribute="width" constant="85" id="pG4-2X-6yp"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="pG4-2X-6yp"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                                                         <nil key="textColor"/>
@@ -519,28 +526,32 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Iq-T97">
                                                         <rect key="frame" x="0.0" y="619" width="398" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-3N-hrw">
+                                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-3N-hrw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
-                                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="5KR-Ln-CXF"/>
-                                                                    <constraint firstAttribute="width" constant="195" id="btb-6Z-zo7"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="btb-6Z-zo7"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                                                                <state key="normal" title="Save for later"/>
+                                                                <state key="normal" title="Save for later">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="saveButtonTapped:" destination="pk4-qS-FpZ" eventType="touchUpInside" id="4GM-eY-YMn"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-hd-zpG">
+                                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-hd-zpG">
                                                                 <rect key="frame" x="203" y="0.0" width="195" height="50"/>
-                                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="195" id="BmQ-n2-T3u"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="BmQ-n2-T3u"/>
                                                                     <constraint firstAttribute="height" constant="50" id="gYf-Nb-JBn"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                                                                <state key="normal" title="Open Recipe"/>
+                                                                <state key="normal" title="Open Recipe">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="openRecipePressed:" destination="pk4-qS-FpZ" eventType="touchUpInside" id="iZW-uO-zCx"/>
                                                                 </connections>
@@ -557,7 +568,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="old-8R-3XQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="25"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="398" id="Ba0-ff-5hE"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="Ba0-ff-5hE"/>
                                                                     <constraint firstAttribute="height" constant="25" id="Ugc-sC-MXx"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
@@ -573,7 +584,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M01-HW-HrR">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="M2H-8h-v3E"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="M2H-8h-v3E"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="ZHT-em-gDa"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -583,7 +594,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9D-VS-sdM">
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="qwx-UV-vR8"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="qwx-UV-vR8"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="x7f-Ch-9Rw"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -599,7 +610,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="TOW-uP-rXC"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="teT-46-OkW"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="teT-46-OkW"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -608,7 +619,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMw-mn-jUa">
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="jd1-AY-neK"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="jd1-AY-neK"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="s7k-zm-44T"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -623,8 +634,8 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmr-5o-JtE">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="6rc-Hi-t0t"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="bnq-k8-Ohh"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="meb-Xo-OAB"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -633,7 +644,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRS-D4-umC">
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="0KA-XT-w0Z"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="0KA-XT-w0Z"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="Zx4-gH-nh3"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -641,6 +652,10 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="25" id="PbO-zU-zKh"/>
+                                                                            <constraint firstAttribute="width" constant="398" id="RhL-TJ-Has"/>
+                                                                        </constraints>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ys9-gN-hh9">
                                                                         <rect key="frame" x="0.0" y="81" width="398" height="25"/>
@@ -648,7 +663,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qc7-dM-EUT">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="NFo-xn-REr"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="NFo-xn-REr"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="ddE-l3-SFL"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -658,7 +673,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qq-GS-ed3">
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="JHz-Nt-6rH"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="JHz-Nt-6rH"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="SjH-vk-zdV"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -674,7 +689,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="ozF-OA-6ga"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="p7V-RC-UER"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="p7V-RC-UER"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -684,7 +699,7 @@
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="214-Oh-bF7"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="maP-pg-dxQ"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="maP-pg-dxQ"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -698,7 +713,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6T-J2-H5K">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="HYh-8e-LTG"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="HYh-8e-LTG"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="zeI-WI-9ep"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -709,7 +724,7 @@
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="7nl-XM-zFw"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="lhb-2L-Fud"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="lhb-2L-Fud"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -723,7 +738,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWo-ZZ-jUj">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="BMu-7b-z2n"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="BMu-7b-z2n"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="kg2-dM-xds"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -733,7 +748,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSy-Z4-4tj">
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="2f8-zf-iNq"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="2f8-zf-iNq"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="lvx-ea-2pc"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -748,7 +763,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOc-Vb-RgC">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="BPo-p7-Eee"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="BPo-p7-Eee"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="n1d-64-PNx"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -758,7 +773,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgC-dn-NLN">
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="JcA-GW-x80"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="JcA-GW-x80"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="QSF-YR-csQ"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -774,7 +789,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="FXn-xZ-gIW"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="rCx-MW-5D0"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="rCx-MW-5D0"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -784,7 +799,7 @@
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="CYG-qu-qOb"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="eKI-YW-9Xd"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="eKI-YW-9Xd"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -798,7 +813,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqn-87-9hz">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="195" id="6bK-tq-I9T"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="6bK-tq-I9T"/>
                                                                                     <constraint firstAttribute="height" constant="25" id="vSw-0H-LMf"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
@@ -809,7 +824,7 @@
                                                                                 <rect key="frame" x="203" y="0.0" width="195" height="25"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="25" id="a5Q-I2-KFp"/>
-                                                                                    <constraint firstAttribute="width" constant="195" id="jna-SE-eN4"/>
+                                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="jna-SE-eN4"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                                                 <nil key="textColor"/>
@@ -822,14 +837,16 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="398" id="7lu-vb-V82"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="303" id="fJb-X5-sbe"/>
                                                             <constraint firstAttribute="height" constant="303" id="h4x-YF-Hyq"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="ihr-UE-7bH"/>
                                                         </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW0-4R-MyY">
                                                         <rect key="frame" x="0.0" y="1012" width="398" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="Efb-Sp-xoQ"/>
-                                                            <constraint firstAttribute="width" constant="398" id="OhO-KK-YNE"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="OhO-KK-YNE"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -837,12 +854,11 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KAB-mk-Mtn">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KAB-mk-Mtn">
                                                 <rect key="frame" x="8" y="1055" width="398" height="584"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="1NS-Cb-zkD"/>
                                                     <constraint firstAttribute="width" constant="398" id="f6T-L8-nCv"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="584" id="gii-RC-pkh"/>
+                                                    <constraint firstAttribute="height" constant="584" id="gii-RC-pkh"/>
                                                 </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -855,12 +871,10 @@
                                             <constraint firstItem="lxg-Rq-vr7" firstAttribute="top" secondItem="1Uv-e5-3ir" secondAttribute="top" constant="8" id="2Td-yW-TPg"/>
                                             <constraint firstItem="lxg-Rq-vr7" firstAttribute="leading" secondItem="1Uv-e5-3ir" secondAttribute="leading" constant="8" id="8M2-TN-5e2"/>
                                             <constraint firstItem="KAB-mk-Mtn" firstAttribute="leading" secondItem="1Uv-e5-3ir" secondAttribute="leading" constant="8" id="91r-UK-gUi"/>
-                                            <constraint firstItem="KAB-mk-Mtn" firstAttribute="leading" secondItem="1Uv-e5-3ir" secondAttribute="leading" constant="8" id="Cli-aY-e5x"/>
                                             <constraint firstAttribute="trailing" secondItem="lxg-Rq-vr7" secondAttribute="trailing" constant="8" id="Lqa-SY-YlU"/>
                                             <constraint firstItem="KAB-mk-Mtn" firstAttribute="top" secondItem="lxg-Rq-vr7" secondAttribute="bottom" constant="10" id="Nd6-XW-Jen"/>
                                             <constraint firstAttribute="height" constant="1700" id="fU4-Vr-uw2"/>
                                             <constraint firstAttribute="trailing" secondItem="KAB-mk-Mtn" secondAttribute="trailing" constant="8" id="lvj-iz-AEI"/>
-                                            <constraint firstAttribute="trailing" secondItem="KAB-mk-Mtn" secondAttribute="trailing" constant="8" id="xFR-HS-C3q"/>
                                             <constraint firstItem="KAB-mk-Mtn" firstAttribute="top" secondItem="lxg-Rq-vr7" secondAttribute="bottom" constant="10" id="zb6-aF-vYc"/>
                                         </constraints>
                                     </view>
@@ -1040,11 +1054,17 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
