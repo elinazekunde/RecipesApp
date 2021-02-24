@@ -20,6 +20,26 @@ class DetailViewController: UIViewController {
     var tagString = String()
     var instructionsString = String()
     var urlString = String()
+    var ingr1Str = String()
+    var ingr2Str = String()
+    var ingr3Str = String()
+    var ingr4Str = String()
+    var ingr5Str = String()
+    var ingr6Str = String()
+    var ingr7Str = String()
+    var ingr8Str = String()
+    var ingr9Str = String()
+    var ingr10Str = String()
+    var measure1Str = String()
+    var measure2Str = String()
+    var measure3Str = String()
+    var measure4Str = String()
+    var measure5Str = String()
+    var measure6Str = String()
+    var measure7Str = String()
+    var measure8Str = String()
+    var measure9Str = String()
+    var measure10Str = String()
     
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeLabel: UILabel!
@@ -27,7 +47,26 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var tagLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UITextView!
-    @IBOutlet weak var textViewHC: NSLayoutConstraint!
+    @IBOutlet weak var ingr1: UILabel!
+    @IBOutlet weak var ingr2: UILabel!
+    @IBOutlet weak var ingr3: UILabel!
+    @IBOutlet weak var ingr4: UILabel!
+    @IBOutlet weak var ingr5: UILabel!
+    @IBOutlet weak var ingr6: UILabel!
+    @IBOutlet weak var ingr7: UILabel!
+    @IBOutlet weak var ingr8: UILabel!
+    @IBOutlet weak var ingr9: UILabel!
+    @IBOutlet weak var ingr10: UILabel!
+    @IBOutlet weak var measure1: UILabel!
+    @IBOutlet weak var measure2: UILabel!
+    @IBOutlet weak var measure3: UILabel!
+    @IBOutlet weak var measure4: UILabel!
+    @IBOutlet weak var measure5: UILabel!
+    @IBOutlet weak var measure6: UILabel!
+    @IBOutlet weak var measure7: UILabel!
+    @IBOutlet weak var measure8: UILabel!
+    @IBOutlet weak var measure9: UILabel!
+    @IBOutlet weak var measure10: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +77,27 @@ class DetailViewController: UIViewController {
         areaLabel.text = areaString
         tagLabel.text = tagString
         instructionsLabel.text = instructionsString
+        ingr1.text = ingr1Str
+        ingr2.text = ingr2Str
+        ingr3.text = ingr3Str
+        ingr4.text = ingr4Str
+        ingr5.text = ingr5Str
+        ingr6.text = ingr6Str
+        ingr7.text = ingr7Str
+        ingr8.text = ingr8Str
+        ingr9.text = ingr9Str
+        ingr10.text = ingr10Str
+        measure1.text = measure1Str
+        measure2.text = measure2Str
+        measure3.text = measure3Str
+        measure4.text = measure4Str
+        measure5.text = measure5Str
+        measure6.text = measure6Str
+        measure7.text = measure7Str
+        measure8.text = measure8Str
+        measure9.text = measure9Str
+        measure10.text = measure10Str
         
-        textViewHC.constant = self.instructionsLabel.contentSize.height + 30
-
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
     }
@@ -81,18 +138,7 @@ class DetailViewController: UIViewController {
         do {
             try context?.save()
         } catch {
-            warningPopup(withTitle: "Error!", withMessage: error.localizedDescription)
-        }
-    }
-    
-    func warningPopup(withTitle title: String?, withMessage message: String?) {
-        DispatchQueue.main.async {
-            let popup = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            popup.addAction(okButton)
-            
-            self.present(popup, animated: true, completion: nil)
+            warningPopup(withTitle: "Error occured!", withMessage: error.localizedDescription)
         }
     }
     
@@ -105,5 +151,4 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -23,7 +23,7 @@ class ShoppingListTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,18 +44,25 @@ class ShoppingListTableViewController: UITableViewController {
         }
         alertController.addTextField { (detailsField: UITextField) in
             detailsField.placeholder = "Enter additional details, e.g., weight"
+            detailsField.autocapitalizationType = .sentences
+            detailsField.autocorrectionType = .no
         }
         
         let addAction = UIAlertAction(title: "Add", style: .cancel) { (action: UIAlertAction) in
+            
             let textField = alertController.textFields?.first
             let detailsField = alertController.textFields?.last
             
-            let entity = NSEntityDescription.entity(forEntityName: "ShoppingList", in: self.context!)
-            let item = NSManagedObject(entity: entity!, insertInto: self.context)
-            item.setValue(textField?.text, forKey: "title")
-            item.setValue(detailsField?.text, forKey: "details")
-            
-            self.saveData()
+            if textField?.text == "" {
+                self.warningPopup(withTitle: "Please enter item name", withMessage: nil)
+            } else {
+                let entity = NSEntityDescription.entity(forEntityName: "ShoppingList", in: self.context!)
+                let item = NSManagedObject(entity: entity!, insertInto: self.context)
+                item.setValue(textField?.text, forKey: "title")
+                item.setValue(detailsField?.text, forKey: "details")
+                
+                self.saveData()
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
@@ -70,6 +77,7 @@ class ShoppingListTableViewController: UITableViewController {
             let result = try context?.fetch(request)
             shoppingList = result!
         } catch {
+            warningPopup(withTitle: "Error occured!", withMessage: error.localizedDescription)
             fatalError(error.localizedDescription)
         }
         tableView.reloadData()
@@ -79,6 +87,7 @@ class ShoppingListTableViewController: UITableViewController {
         do {
             try self.context?.save()
         } catch {
+            warningPopup(withTitle: "Error occured!", withMessage: error.localizedDescription)
             fatalError(error.localizedDescription)
         }
         loadData()
@@ -96,7 +105,6 @@ class ShoppingListTableViewController: UITableViewController {
         cell.textLabel?.text = item.value(forKey: "title") as? String
         cell.detailTextLabel?.text = item.value(forKey: "details") as? String
         cell.accessoryType = item.bought ? .checkmark : .none
-        item.bought ? (cell.detailTextLabel?.text = "") : (cell.detailTextLabel?.text = item.value(forKey: "details") as? String)
         cell.selectionStyle = .none
         return cell
     }
@@ -123,7 +131,7 @@ class ShoppingListTableViewController: UITableViewController {
             let alert = UIAlertController(title: "Delete.", message: "Are you sure you want to delete this item?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { _ in
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
                 let item = self.shoppingList[indexPath.row]
                 
                 self.context?.delete(item)
@@ -133,12 +141,12 @@ class ShoppingListTableViewController: UITableViewController {
         }
     }
 
-    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let currentItem = shoppingList.remove(at: fromIndexPath.row)
+        shoppingList.insert(currentItem, at: to.row)
+        saveData()
     }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.

@@ -36,10 +36,12 @@ class BookmarksTableViewController: UITableViewController {
         let request: NSFetchRequest<Bookmarks> = Bookmarks.fetchRequest()
         
         do {
-            bookmarks = try (context?.fetch(request))!
+            let result = try context?.fetch(request)
+            bookmarks = result!
         } catch {
             warningPopup(withTitle: "Error!", withMessage: error.localizedDescription)
         }
+        tableView.reloadData()
     }
     
     func saveData() {
@@ -48,18 +50,7 @@ class BookmarksTableViewController: UITableViewController {
         } catch {
             warningPopup(withTitle: "Error!", withMessage: error.localizedDescription)
         }
-        tableView.reloadData()
-    }
-    
-    func warningPopup(withTitle title: String?, withMessage message: String?) {
-        DispatchQueue.main.async {
-            let popup = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            popup.addAction(okButton)
-            
-            self.present(popup, animated: true, completion: nil)
-        }
+        loadData()
     }
     
     // MARK: - Table view data source
@@ -107,7 +98,6 @@ class BookmarksTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
             let alert = UIAlertController(title: "Delete", message: "Are you sure to delete?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

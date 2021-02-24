@@ -21,7 +21,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guard let url = URL(string: url) else { return }
         
         webView.load(URLRequest(url: url))
@@ -29,12 +29,33 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        showSpinner()
         print("Start nav")
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        removeSpinner()
         print("nav stopped")
     }
+    
+    fileprivate var aView: UIView?
+    
+    func showSpinner() {
+        aView = UIView(frame: self.view.bounds)
+        aView?.backgroundColor = .clear
+        
+        let ai = UIActivityIndicatorView(style: .large)
+        ai.center = aView!.center
+        ai.startAnimating()
+        aView?.addSubview(ai)
+        self.view.addSubview(aView!)
+    }
+    
+    func removeSpinner() {
+        aView?.removeFromSuperview()
+        aView = nil
+    }
+    
     /*
     // MARK: - Navigation
 
