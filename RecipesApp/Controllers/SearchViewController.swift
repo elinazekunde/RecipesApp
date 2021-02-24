@@ -15,67 +15,75 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var keywordLabel: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator(animated: true)
-        handleGetData()
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
         handleGetData()
-        activityIndicator(animated: true)
-    }
-    
-    func activityIndicator(animated: Bool) {
-        DispatchQueue.main.async {
-            if animated {
-                self.tableView.isHidden = false
-                self.activityIndicator.style = .large
-                self.activityIndicator.isHidden = false
-                self.activityIndicator.startAnimating()
-            } else {
-                self.activityIndicator.isHidden = true
-                self.activityIndicator.stopAnimating()
-            }
-        }
+        showSpinner()
+        view.endEditing(true)
     }
     
     func handleGetData() {
         
         if let keyword = keywordLabel.text, keyword != "" {
             jsonUrl += keyword
-        }
-
-        guard let url = URL(string: jsonUrl) else { return }
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-type")
-        
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let task = session.dataTask(with: urlRequest) { (data, response, error) in
-            if let err = error {
-                self.warningPopup(withTitle: "Error occured!", withMessage: err.localizedDescription)
-            }
             
-            guard let data = data else {
-                self.warningPopup(withTitle: "Error occured!", withMessage: error?.localizedDescription)
-                return
-            }
+            guard let url = URL(string: jsonUrl) else { return }
             
-            do {
-                if let dictData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    print("dictData", dictData)
-                    self.populateData(dictData)
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "GET"
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-type")
+            
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            let task = session.dataTask(with: urlRequest) { (data, response, error) in
+                if let err = error {
+                    self.warningPopup(withTitle: "Error occured!", withMessage: err.localizedDescription)
                 }
-            } catch {
-                self.warningPopup(withTitle: "Error occured!", withMessage: error.localizedDescription)
-                print("error when converting json")
+                
+                guard let data = data else {
+                    self.warningPopup(withTitle: "Error occured!", withMessage: error?.localizedDescription)
+                    return
+                }
+                
+                do {
+                    if let dictData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        print("dictData", dictData)
+                        self.populateData(dictData)
+                    }
+                } catch {
+                    self.warningPopup(withTitle: "Error occured!", withMessage: error.localizedDescription)
+                    print("error when converting json")
+                }
             }
+            task.resume()
+        } else {
+            warningPopup(withTitle: "Please enter search details!", withMessage: nil)
         }
-        task.resume()
+    }
+    
+    fileprivate var aView: UIView?
+    
+    func showSpinner() {
+        aView = UIView(frame: self.view.bounds)
+        aView?.backgroundColor = .clear
+        
+        let ai = UIActivityIndicatorView(style: .large)
+        ai.center = aView!.center
+        ai.startAnimating()
+        aView?.addSubview(ai)
+        self.view.addSubview(aView!)
+        
+        Timer.scheduledTimer(withTimeInterval: 15.0, repeats: false) { t in
+            self.removeSpinner()
+        }
+    }
+    
+    func removeSpinner() {
+        aView?.removeFromSuperview()
+        aView = nil
     }
     
     func populateData(_ dict: [String: Any]) {
@@ -87,7 +95,7 @@ class SearchViewController: UIViewController {
             self.tableView.reloadData()
             self.keywordLabel.text = ""
             self.jsonUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s="
-            self.activityIndicator(animated: false)
+            self.removeSpinner()
         }
     }
 }

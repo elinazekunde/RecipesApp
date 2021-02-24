@@ -28,7 +28,7 @@
                                             <constraint firstAttribute="height" constant="40" id="eWB-va-qBo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                     </textField>
                                     <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-Uf-Sxk">
                                         <rect key="frame" x="315" y="0.0" width="60" height="40"/>
@@ -178,26 +178,20 @@
                                     <outlet property="delegate" destination="jVZ-Dn-faQ" id="aJb-A8-WIC"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-ij-xkb">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4a-fP-8eq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qh7-yK-Isu" firstAttribute="bottom" secondItem="D4a-fP-8eq" secondAttribute="bottom" id="1Kk-4O-lX7"/>
-                            <constraint firstItem="gnN-ij-xkb" firstAttribute="centerX" secondItem="W2W-qs-Glp" secondAttribute="centerX" id="7Or-aZ-TRG"/>
                             <constraint firstItem="Qh7-yK-Isu" firstAttribute="top" secondItem="kRb-G9-A8X" secondAttribute="bottom" constant="30" id="9L2-FW-a3V"/>
                             <constraint firstItem="Qh7-yK-Isu" firstAttribute="trailing" secondItem="D4a-fP-8eq" secondAttribute="trailing" id="KHG-LG-sdg"/>
                             <constraint firstItem="kRb-G9-A8X" firstAttribute="leading" secondItem="W2W-qs-Glp" secondAttribute="leadingMargin" id="UWl-p8-Rgu"/>
                             <constraint firstItem="Qh7-yK-Isu" firstAttribute="leading" secondItem="D4a-fP-8eq" secondAttribute="leading" id="Zpl-an-iQl"/>
                             <constraint firstItem="kRb-G9-A8X" firstAttribute="top" secondItem="D4a-fP-8eq" secondAttribute="top" constant="30" id="pDG-56-jTA"/>
-                            <constraint firstItem="gnN-ij-xkb" firstAttribute="centerY" secondItem="W2W-qs-Glp" secondAttribute="centerY" id="u5j-zy-deI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search new recipes" id="tG8-co-9y6"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="gnN-ij-xkb" id="yiC-jk-dR4"/>
                         <outlet property="keywordLabel" destination="N76-6q-2WO" id="EoY-3X-iMp"/>
                         <outlet property="tableView" destination="Qh7-yK-Isu" id="5do-Nu-0Sz"/>
                     </connections>
