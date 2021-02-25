@@ -387,6 +387,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shopping List" id="EWN-vd-nxZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="H5A-kf-nLy">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="RrC-v4-tfk" id="ptk-ed-Q1I"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4iU-Qz-TZ2">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>

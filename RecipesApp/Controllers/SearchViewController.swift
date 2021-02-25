@@ -55,7 +55,6 @@ class SearchViewController: UIViewController {
                 
                 do {
                     if let dictData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        print("dictData", dictData)
                         self.populateData(dictData)
                     }
                 } catch {

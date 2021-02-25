@@ -12,16 +12,14 @@ class ShoppingListTableViewController: UITableViewController {
 
     var shoppingList = [ShoppingList]()
     var context: NSManagedObjectContext?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         context = appDelegate.persistentContainer.viewContext
-
-         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         loadData()
@@ -29,6 +27,13 @@ class ShoppingListTableViewController: UITableViewController {
 
     @IBAction func addNewItemTapped(_ sender: Any) {
         addNewItem()
+    }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        let result = sharedData()
+        let shareSheetVC = UIActivityViewController(activityItems: [result], applicationActivities: nil)
+        
+        present(shareSheetVC, animated: true)
     }
     
     private func addNewItem() {
@@ -56,7 +61,6 @@ class ShoppingListTableViewController: UITableViewController {
                 let item = NSManagedObject(entity: entity!, insertInto: self.context)
                 item.setValue(textField?.text, forKey: "title")
                 item.setValue(detailsField?.text, forKey: "details")
-                
                 self.saveData()
             }
         }
@@ -65,6 +69,28 @@ class ShoppingListTableViewController: UITableViewController {
         alertController.addAction(cancelAction)
         alertController.addAction(addAction)
         present(alertController, animated: true)
+    }
+    
+    func sharedData() -> String {
+        var resultString = ""
+
+        let request: NSFetchRequest<ShoppingList> = ShoppingList.fetchRequest()
+        do {
+            let result = try context?.fetch(request)
+            shoppingList = result!
+        } catch {
+            warningPopup(withTitle: "Error occured!", withMessage: error.localizedDescription)
+            fatalError(error.localizedDescription)
+        }
+        
+        shoppingList.forEach { item in
+            if resultString == "" {
+                resultString.append("\(item.value(forKey: "title")!) - \(item.value(forKey: "details")!)")
+            } else {
+                resultString.append(", \(item.value(forKey: "title")!) - \(item.value(forKey: "details")!)")
+            }
+        }
+        return resultString
     }
     
     func loadData() {
