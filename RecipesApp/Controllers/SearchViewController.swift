@@ -15,9 +15,14 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var keywordLabel: UITextField!
+    @IBOutlet weak var searchButton: BounceButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchButton.layer.cornerRadius = 10
+        keywordLabel.layer.borderWidth = 1
+        keywordLabel.layer.borderColor = UIColor.systemBlue.cgColor
+        keywordLabel.layer.cornerRadius = 15
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
@@ -115,7 +120,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if let image = item.image {
             cell.imageView!.image = image
         }
-        
+        cell.recipeLabel.layer.borderWidth = 1
+        cell.recipeLabel.layer.borderColor = UIColor.systemBlue.cgColor
         cell.recipeLabel.text = item.title
         cell.categoryLabel.text = item.category
         cell.areaLabel.text = item.area

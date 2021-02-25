@@ -21,6 +21,8 @@
 		1B1BF4FD25E4F71E0089FFD1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF4FC25E4F71E0089FFD1 /* DetailViewController.swift */; };
 		1B1BF50325E50ABD0089FFD1 /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF50225E50ABD0089FFD1 /* BookmarksTableViewController.swift */; };
 		1B1BF50625E51BAB0089FFD1 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BF50525E51BAB0089FFD1 /* ShoppingListTableViewController.swift */; };
+		1B3E80A525E7A746000DC69C /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3E80A425E7A746000DC69C /* BounceButton.swift */; };
+		1B3E80AC25E7B280000DC69C /* TextFieldPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3E80AB25E7B280000DC69C /* TextFieldPadding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		1B1BF4FC25E4F71E0089FFD1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1B1BF50225E50ABD0089FFD1 /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
 		1B1BF50525E51BAB0089FFD1 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
+		1B3E80A425E7A746000DC69C /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
+		1B3E80AB25E7B280000DC69C /* TextFieldPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPadding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		1B1BF4BD25E3E7F90089FFD1 /* RecipesApp */ = {
 			isa = PBXGroup;
 			children = (
+				1B3E80A325E7A713000DC69C /* ExtraResources */,
 				1B1BF4DF25E3E9BC0089FFD1 /* Model */,
 				1B1BF4F525E42D150089FFD1 /* AppDelegate */,
 				1B1BF4D625E3E9210089FFD1 /* Controllers */,
@@ -120,6 +125,15 @@
 				1B1BF4C025E3E7F90089FFD1 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1B3E80A325E7A713000DC69C /* ExtraResources */ = {
+			isa = PBXGroup;
+			children = (
+				1B3E80A425E7A746000DC69C /* BounceButton.swift */,
+				1B3E80AB25E7B280000DC69C /* TextFieldPadding.swift */,
+			);
+			path = ExtraResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +219,9 @@
 				1B1BF4C925E3E7F90089FFD1 /* RecipesApp.xcdatamodeld in Sources */,
 				1B1BF50625E51BAB0089FFD1 /* ShoppingListTableViewController.swift in Sources */,
 				1B1BF50325E50ABD0089FFD1 /* BookmarksTableViewController.swift in Sources */,
+				1B3E80A525E7A746000DC69C /* BounceButton.swift in Sources */,
 				1B1BF4E125E3E9C70089FFD1 /* Item.swift in Sources */,
+				1B3E80AC25E7B280000DC69C /* TextFieldPadding.swift in Sources */,
 				1B1BF4F325E427460089FFD1 /* WebViewController.swift in Sources */,
 				1B1BF4FD25E4F71E0089FFD1 /* DetailViewController.swift in Sources */,
 			);

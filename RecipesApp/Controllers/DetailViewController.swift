@@ -41,6 +41,8 @@ class DetailViewController: UIViewController {
     var measure9Str = String()
     var measure10Str = String()
     
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var openRecipeButton: UIButton!
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -71,6 +73,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        saveButton.layer.cornerRadius = 15
+        openRecipeButton.layer.cornerRadius = 15
+        
         recipeLabel.text = titleString
         recipeImageView.image = recipeImage
         categoryLabel.text = categoryString

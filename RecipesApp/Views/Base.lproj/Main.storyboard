@@ -20,17 +20,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kRb-G9-A8X">
                                 <rect key="frame" x="20" y="118" width="375" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N76-6q-2WO">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter keyword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N76-6q-2WO" customClass="TextFieldPadding" customModule="RecipesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="285" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="285" id="CrV-Nw-Clr"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="CrV-Nw-Clr"/>
                                             <constraint firstAttribute="height" constant="40" id="eWB-va-qBo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                     </textField>
-                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-Uf-Sxk">
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cse-Uf-Sxk" customClass="BounceButton" customModule="RecipesApp" customModuleProvider="target">
                                         <rect key="frame" x="315" y="0.0" width="60" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
@@ -193,6 +193,7 @@
                     <navigationItem key="navigationItem" title="Search new recipes" id="tG8-co-9y6"/>
                     <connections>
                         <outlet property="keywordLabel" destination="N76-6q-2WO" id="EoY-3X-iMp"/>
+                        <outlet property="searchButton" destination="Cse-Uf-Sxk" id="CRx-Ap-tmj"/>
                         <outlet property="tableView" destination="Qh7-yK-Isu" id="5do-Nu-0Sz"/>
                     </connections>
                 </viewController>
@@ -520,7 +521,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Iq-T97">
                                                         <rect key="frame" x="0.0" y="619" width="398" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-3N-hrw">
+                                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-3N-hrw" customClass="BounceButton" customModule="RecipesApp" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                                 <constraints>
@@ -535,7 +536,7 @@
                                                                     <action selector="saveButtonTapped:" destination="pk4-qS-FpZ" eventType="touchUpInside" id="4GM-eY-YMn"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-hd-zpG">
+                                                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-hd-zpG" customClass="BounceButton" customModule="RecipesApp" customModuleProvider="target">
                                                                 <rect key="frame" x="203" y="0.0" width="195" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                                 <constraints>
@@ -917,8 +918,10 @@
                         <outlet property="measure7" destination="WSy-Z4-4tj" id="ZQf-J6-fWa"/>
                         <outlet property="measure8" destination="VgC-dn-NLN" id="tYU-l1-9lv"/>
                         <outlet property="measure9" destination="btr-y4-Af0" id="6pn-fy-gOk"/>
+                        <outlet property="openRecipeButton" destination="u4d-hd-zpG" id="XLl-fx-XyI"/>
                         <outlet property="recipeImageView" destination="HvP-IX-3aH" id="zYB-bu-drA"/>
                         <outlet property="recipeLabel" destination="e5P-rA-ZUJ" id="psq-7Z-is6"/>
+                        <outlet property="saveButton" destination="foQ-3N-hrw" id="2aT-tt-H34"/>
                         <outlet property="tagLabel" destination="8MR-uD-wuB" id="OgF-P7-rXf"/>
                     </connections>
                 </viewController>
