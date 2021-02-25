@@ -29,14 +29,22 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView.allowsBackForwardNavigationGestures = true
     }
     
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        guard let url = URL(string: url) else { return }
+        
+        let shareSheetVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        
+        present(shareSheetVC, animated: true)
+    }
+    
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         showSpinner()
-        print("Start nav")
+        print("Start navigation")
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         removeSpinner()
-        print("nav stopped")
+        print("Navigation stopped")
     }
     
     fileprivate var aView: UIView?
@@ -53,7 +61,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         
         Timer.scheduledTimer(withTimeInterval: 15.0, repeats: false) { t in
             self.removeSpinner()
-            self.warningPopup(withTitle: "Webpage is not currently available!", withMessage: nil)
         }
     }
     

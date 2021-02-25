@@ -938,7 +938,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-oC-cN8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -956,7 +956,14 @@
                             <constraint firstItem="vfA-oC-cN8" firstAttribute="leading" secondItem="y7H-GK-WCF" secondAttribute="leading" id="c3v-66-Zlc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="T7k-rt-hey"/>
+                    <navigationItem key="navigationItem" id="T7k-rt-hey">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="6Bt-7h-aok">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="lMN-fd-aoB" id="JIg-ax-I0s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="webView" destination="vfA-oC-cN8" id="sox-FD-YYn"/>
                     </connections>
